@@ -90,7 +90,7 @@ import org.osgi.framework.ServiceReference;
 import org.osgi.service.packageadmin.PackageAdmin;
 
 /**
- * [hugues]: copied and pasted from p2 driector helios 3.6.0 with minor modifications to support the -addSources arguments.
+ * [hugues]: copied and pasted from p2 director helios 3.6.0 with minor modifications to support the -addSources arguments.
  * 
  * This director implementation is a complete replacement for the old director application. 
  * This implementation has simplified command line 
@@ -657,7 +657,7 @@ public class ForkedDirectorApplication implements IApplication {
 				IProfileRegistry profileRegistry = (IProfileRegistry) targetAgent.getService(IProfileRegistry.SERVICE_NAME);
 			 	IProvisioningPlan sourcesPlan =
 			 			AddSourcesRequirementsHelper.planInSourceBundles(profile,
-						context, new NullProgressMonitor(), profileRegistry, engine, planner);
+						context, new NullProgressMonitor(), profileRegistry, planner);
 			 	long oldTimestamp = profile.getTimestamp();
 				IPhaseSet phases = PhaseSetFactory.createDefaultPhaseSetExcluding(
 						new String[] {PhaseSetFactory.PHASE_CHECK_TRUST, PhaseSetFactory.PHASE_CONFIGURE,

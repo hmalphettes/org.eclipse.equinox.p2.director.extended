@@ -32,6 +32,14 @@
       </application>
    </extension>
 	
+    <extension id="org.eclipse.equinox.p2.repository.extended.mirrorApplication" point="org.eclipse.core.runtime.applications">
+        <application cardinality="1" thread="main" visible="true">
+            <run class="org.eclipse.equinox.p2.internal.repository.tools.extended.MirrorApplicationWithFilters">
+                <parameter name="metadataOrArtifacts" value="both" />
+            </run>
+      </application>
+   </extension>
+	
 	
 	<!-- Support for http basic authentication with credentials written
 	inside the url, debian style: http://USERNAME:PASSWORD@HOST:PORT/... -->

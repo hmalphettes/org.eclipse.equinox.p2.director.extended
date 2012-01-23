@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.StringTokenizer;
 
-import org.eclipse.equinox.internal.p2.artifact.repository.extended.ArtifactRepositoryManagerFiltered;
 import org.eclipse.equinox.p2.director.extended.ArgumentsLoader;
 import org.eclipse.equinox.p2.internal.repository.mirroring.Mirroring;
 import org.eclipse.equinox.p2.metadata.IArtifactKey;
@@ -30,7 +29,6 @@ import org.eclipse.equinox.p2.query.IQueryResult;
 import org.eclipse.equinox.p2.query.QueryUtil;
 import org.eclipse.equinox.p2.repository.artifact.ArtifactKeyQuery;
 import org.eclipse.equinox.p2.repository.artifact.IArtifactDescriptor;
-import org.eclipse.equinox.p2.repository.artifact.IArtifactRepositoryManager;
 
 /**
  * Extends the p2 mirror application and the mirroring itself to filter the artifacts that are mirrored.
@@ -50,7 +48,7 @@ import org.eclipse.equinox.p2.repository.artifact.IArtifactRepositoryManager;
  *
  */
 public class MirrorApplicationWithFilters extends MirrorApplicationForked {
-
+	
 	/**
 	 * @see QueryUtil#createIUQuery
 	 */

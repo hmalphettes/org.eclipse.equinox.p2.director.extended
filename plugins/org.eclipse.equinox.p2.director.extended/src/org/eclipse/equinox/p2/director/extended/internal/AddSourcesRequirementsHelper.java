@@ -62,7 +62,7 @@ public class AddSourcesRequirementsHelper {
 	 * in the current profile.
 	 */
 	public static IProvisioningPlan planInSourceBundles(IProfile profile, ProvisioningContext context, IProgressMonitor monitor,
-			IProfileRegistry profileRegistry, IEngine engine, IPlanner planner) throws CoreException {
+			IProfileRegistry profileRegistry, IPlanner planner) throws CoreException {
 //		if (!fIncludeSource)
 //			return;
 

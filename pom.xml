@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.eclipse.rt</groupId>
   <artifactId>p2director</artifactId>
-  <version>3.7.0-SNAPSHOT</version>
+  <version>3.8.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
     <module>plugins/org.eclipse.equinox.p2.director.extended</module>
@@ -15,21 +15,14 @@
   </modules>
 
   <properties>
-    <eclipse-mirror-url>http://www.intalio.org/public/p2repo/org/eclipse</eclipse-mirror-url>
     <main-eclipse-url>http://download.eclipse.org</main-eclipse-url>
   
     <!--pathToPack200ParentFolder>/usr/lib/jvm/java-5-sun/bin</pathToPack200ParentFolder-->
-    <forceContextQualifier>v20110221</forceContextQualifier>
+    <forceContextQualifier>v20120122</forceContextQualifier>
     <tycho-version>0.9.1</tycho-version>
     
-    <jetty-site>${eclipse-mirror-url}/jetty/7.1.4.v20100610/repository/</jetty-site>
-    <!-- http://download.eclipse.org/eclipse/updates/3.6milestones -->
-    <i-orbit-site>http://release.intalio.com/m2repo/com/intalio/helium/orbit-p2/repository/1.0.0.018</i-orbit-site>
-    <i-orbit-binaries>http://release.intalio.com/m2repo/com/intalio/helium/orbit-p2/repository-binaries/1.0.0.017</i-orbit-binaries>
-    <!--equinox-site>${main-eclipse-url}/eclipse/updates/3.7milestones/S-3.7M3-201010281441</equinox-site-->
-    <equinox-site>${main-eclipse-url}/eclipse/updates/3.7milestones</equinox-site>
-    <!--equinox-site>${eclipse-mirror-url}/eclipse/updates/3.6</equinox-site-->
-    <ecf-site>${main-eclipse-url}/rt/ecf/3.3/helios/site.p2</ecf-site>
+    <equinox-site>${main-eclipse-url}/eclipse/updates/3.8milestones</equinox-site>
+    <ecf-site>${main-eclipse-url}/rt/ecf/3.5.4/site.p2</ecf-site>
   </properties>
 
   <dependencies>
@@ -43,11 +36,6 @@
    <repository>
      <id>intalio-release</id>
      <url>http://release.intalio.com/m2repo/</url>
-   </repository>
-   <repository>
-     <id>jetty-site</id>
-     <layout>p2</layout>
-     <url>${jetty-site}</url>
    </repository>
    <repository>
      <id>equinox</id>
@@ -126,11 +114,11 @@
               <ws>win32</ws>
               <arch>x86_64</arch>
             </environment>
-            <environment>
+            <!--environment>
               <os>macosx</os>
               <ws>carbon</ws>
               <arch>x86</arch>
-            </environment>
+            </environment-->
 	    <environment>
               <os>macosx</os>
               <ws>cocoa</ws>
